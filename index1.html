@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>ATX Cleaning Co. — Austin Home Cleaning</title>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+        <style>:root { --cream: #F7F5F0; --sand: #C4B49A; --sand-lt: #EDE6D8; --powder: #AABFD8; --powder-lt: #D4E4F0; --dusty: #6B8FAE; --navy: #1E3A5F; --navy-mid: #2D527A; --white: #FFFFFF; --dark: #1A1F2E; --mid: #4A5568; --light: #8899AA; --font-d: 'Cormorant Garamond',serif; --font-b: 'DM Sans',sans-serif; --r: 14px; --rl: 22px; } * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { font-family: var(--font-b); background: var(--cream); color: var(--dark); font-weight: 300; line-height: 1.7; overflow-x: hidden; } .ann { background: var(--navy); color: var(--powder-lt); text-align: center; padding: 0.55rem 1rem; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; } nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 3rem; background: rgba(247,245,240,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--sand-lt); transition: box-shadow 0.3s; } nav.scrolled { box-shadow: 0 4px 30px rgba(30,58,95,0.08); } .nav-brand { font-family: var(--font-d); font-size: 22px; font-style: italic; font-weight: 300; color: var(--navy); text-decoration: none; } .nav-brand span { color: var(--dusty); } .nav-links { display: flex; gap: 2rem; align-items: center; } .nav-links a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; } .nav-links a:hover { color: var(--navy); } .nav-btn { background: var(--navy); color: var(--cream)!important; padding: 0.6rem 1.4rem; border-radius: 100px; } .nav-btn:hover { background: var(--dusty)!important; } /* HERO */.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 7rem 3rem 4rem; position: relative; overflow: hidden; gap: 4rem; } .hbg1 { position: absolute; top: -120px; right: -120px; width: 600px; height: 600px; border-radius: 50%; background: var(--powder-lt); opacity: 0.5; pointer-events: none; } .hbg2 { position: absolute; bottom: -80px; left: 30%; width: 340px; height: 340px; border-radius: 50%; background: var(--sand-lt); opacity: 0.45; pointer-events: none; } .hl { position: relative; z-index: 1; } .h-ey { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--dusty); margin-bottom: 1.5rem; } .h-ey::before { content: ''; width: 28px; height: 1px; background: var(--dusty); } .h1 { font-family: var(--font-d); font-size: clamp(52px,6vw,88px); font-weight: 300; font-style: italic; color: var(--navy); line-height: 1; letter-spacing: -1px; margin-bottom: 1.5rem; } .h1 em { color: var(--dusty); } .h-sub { font-size: 14px; color: var(--mid); max-width: 400px; line-height: 1.8; margin-bottom: 2.5rem; } .h-acts { display: flex; gap: 1rem; flex-wrap: wrap; } .btn-p { background: var(--navy); color: var(--cream); padding: 0.9rem 2.2rem; border-radius: 100px; font-family: var(--font-b); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: all 0.25s; display: inline-block; } .btn-p:hover { background: var(--dusty); transform: translateY(-1px); } .btn-g { background: transparent; color: var(--navy); padding: 0.9rem 2.2rem; border-radius: 100px; font-family: var(--font-b); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1.5px solid var(--sand); transition: all 0.25s; display: inline-block; } .btn-g:hover { border-color: var(--navy); transform: translateY(-1px); } .h-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--sand-lt); } .hsn { font-family: var(--font-d); font-size: 36px; font-style: italic; color: var(--navy); } .hsl { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--light); } .hr { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 1.25rem; } .hcard { background: var(--white); border-radius: var(--rl); padding: 1.75rem 2rem; border: 1px solid var(--sand-lt); transition: transform 0.3s; } .hcard:hover { transform: translateY(-3px); } .hcard-ico { font-size: 22px; margin-bottom: 0.75rem; } .hcard-t { font-family: var(--font-d); font-size: 20px; font-style: italic; font-weight: 300; color: var(--navy); margin-bottom: 0.4rem; } .hcard-s { font-size: 12px; color: var(--light); line-height: 1.7; } .hcrow { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; } .hcard.acc { background: var(--navy); border-color: var(--navy); } .hcard.acc .hcard-t { color: var(--cream); } .hcard.acc .hcard-s { color: var(--powder-lt); } .hcard.pw { background: var(--powder-lt); border-color: var(--powder); } .hcard.pw .hcard-t { color: var(--navy); } .hcard.pw .hcard-s { color: var(--dusty); } /* TRUST */.trust { background: var(--navy); padding: 1.1rem 3rem; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; } .ti { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--powder-lt); } .td { width: 4px; height: 4px; border-radius: 50%; background: var(--powder); } /* SECTIONS */section { padding: 7rem 3rem; } .sey { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.75rem; } .st { font-family: var(--font-d); font-size: clamp(32px,4vw,52px); font-weight: 300; font-style: italic; line-height: 1.1; color: var(--navy); margin-bottom: 1rem; } .ss { font-size: 13px; color: var(--mid); max-width: 520px; line-height: 1.8; } .sh { margin-bottom: 3.5rem; } /* SERVICES */.services { background: var(--white); } .sg { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; } .svc { background: var(--cream); border-radius: var(--rl); padding: 2rem 1.75rem; border: 1px solid var(--sand-lt); transition: all 0.3s; position: relative; overflow: hidden; } .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg,var(--powder),var(--dusty)); opacity: 0; transition: opacity 0.3s; } .svc:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(30,58,95,0.1); border-color: var(--powder); } .svc:hover::before { opacity: 1; } .sico { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 1.25rem; background: var(--powder-lt); } .svc h3 { font-family: var(--font-d); font-size: 22px; font-style: italic; font-weight: 300; color: var(--navy); margin-bottom: 0.5rem; } .svc p { font-size: 12px; color: var(--mid); line-height: 1.75; } .stag { display: inline-block; margin-top: 1.1rem; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dusty); border: 1px solid var(--powder); padding: 4px 12px; border-radius: 100px; } /* PRICING */.pricing { background: var(--cream); } .ptabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; } .ptab { padding: 0.65rem 1.4rem; border-radius: 100px; cursor: pointer; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--sand-lt); background: transparent; color: var(--mid); transition: all 0.2s; font-family: var(--font-b); } .ptab.active { background: var(--navy); color: var(--cream); border-color: var(--navy); } .ptab:hover:not(.active) { border-color: var(--dusty); color: var(--navy); } .pp { display: none; } .pp.active { display: block; } .pgrid { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 1rem; } .pc { background: var(--white); border-radius: var(--r); padding: 2rem 1.5rem; border: 1px solid var(--sand-lt); text-align: center; transition: all 0.25s; } .pc:hover { border-color: var(--powder); transform: translateY(-2px); } .pc.feat { background: var(--navy); border-color: var(--navy); box-shadow: 0 12px 40px rgba(30,58,95,0.2); } .pc.feat .pl { color: var(--powder); } .pc.feat .pa { color: var(--cream); } .pc.feat .ps { color: var(--powder-lt); } .pc.feat .pn { color: var(--powder); } .pc.qc { border: 1.5px dashed var(--sand); } .pl { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.75rem; } .pa { font-family: var(--font-d); font-size: 48px; font-style: italic; color: var(--navy); line-height: 1; margin-bottom: 0.5rem; } .qc .pa { font-size: 30px; color: var(--mid); } .ps { font-size: 12px; color: var(--mid); } .pn { font-size: 11px; color: var(--dusty); margin-top: 0.75rem; } .pintro { font-size: 12px; color: var(--mid); line-height: 1.85; margin-bottom: 2rem; max-width: 640px; background: var(--powder-lt); padding: 1.25rem 1.5rem; border-radius: var(--r); border-left: 3px solid var(--dusty); } .rbanner { background: var(--powder-lt); border: 1px solid var(--powder); border-radius: var(--rl); padding: 1.75rem 2.25rem; margin-top: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; } .rbanner strong { font-family: var(--font-d); font-size: 22px; font-style: italic; font-weight: 300; color: var(--navy); display: block; margin-bottom: 4px; } .rbanner p { font-size: 12px; color: var(--dusty); } /* ADD-ONS */.addons { background: var(--white); } .aintro { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; } .agrid { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 0.85rem; } .achip { background: var(--cream); border-radius: var(--r); padding: 1.1rem 1.4rem; border: 1px solid var(--sand-lt); display: flex; align-items: center; gap: 12px; transition: all 0.2s; cursor: pointer; } .achip:hover { border-color: var(--powder); background: var(--powder-lt); } .achip.sel { border-color: var(--navy); background: var(--powder-lt); } .adot { width: 9px; height: 9px; border-radius: 50%; background: var(--powder); flex-shrink: 0; transition: background 0.2s; } .achip.sel .adot { background: var(--navy); } .an { font-size: 13px; color: var(--dark); flex: 1; } .ap { font-family: var(--font-d); font-size: 20px; font-style: italic; color: var(--navy); white-space: nowrap; } /* HOW */.how { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; } .how-bg { position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: var(--dusty); opacity: 0.12; pointer-events: none; } .how .sey { color: var(--powder); } .how .st { color: var(--cream); } .steps { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 3rem; position: relative; z-index: 1; } .step { display: flex; flex-direction: column; gap: 1rem; } .snum { font-family: var(--font-d); font-size: 56px; font-style: italic; font-weight: 300; color: var(--powder); line-height: 1; opacity: 0.6; } .step h4 { font-family: var(--font-d); font-size: 22px; font-style: italic; font-weight: 300; color: var(--cream); } .step p { font-size: 12px; color: var(--powder-lt); line-height: 1.8; opacity: 0.8; } /* BOOKING — Calendly inline */.booking { background: var(--cream); display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; } .binfo .st { color: var(--navy); } .bperks { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.85rem; } .bperks li { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--mid); } .pkd { width: 6px; height: 6px; border-radius: 50%; background: var(--dusty); flex-shrink: 0; } .bpay-note { margin-top: 2rem; background: var(--powder-lt); border-radius: var(--r); padding: 1.25rem 1.5rem; border-left: 3px solid var(--dusty); font-size: 12px; color: var(--mid); line-height: 1.75; } .bpay-note strong { color: var(--navy); display: block; margin-bottom: 4px; font-family: var(--font-d); font-size: 16px; font-style: italic; font-weight: 300; } .bcal-embed { background: var(--white); border-radius: var(--rl); border: 1px solid var(--sand-lt); box-shadow: 0 20px 60px rgba(30,58,95,0.08); overflow: hidden; min-height: 700px; } /* TESTIMONIALS */.testi { background: var(--powder-lt); } .testi .st { color: var(--navy); } .tgrid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; } .tcard { background: var(--white); border-radius: var(--rl); padding: 2.25rem; border: 1px solid rgba(170,191,216,0.3); transition: transform 0.25s; } .tcard:hover { transform: translateY(-3px); } .tstar { color: var(--dusty); font-size: 14px; margin-bottom: 1rem; letter-spacing: 2px; } .ttxt { font-family: var(--font-d); font-size: 18px; font-style: italic; font-weight: 300; color: var(--navy); line-height: 1.65; margin-bottom: 1.25rem; } .tauth { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--light); } /* FOOTER */footer { background: var(--dark); color: rgba(247,245,240,0.6); padding: 4.5rem 3rem 2.5rem; } .fg2 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; } .fbrand { display: flex; flex-direction: column; gap: 1rem; } .flogo { font-family: var(--font-d); font-size: 28px; font-style: italic; color: var(--cream); font-weight: 300; } .flogo span { color: var(--powder); } .ftag { font-size: 11px; max-width: 240px; line-height: 1.75; } .fcol h5 { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,245,240,0.3); margin-bottom: 1.25rem; } .fcol a { display: block; font-size: 12px; color: rgba(247,245,240,0.55); text-decoration: none; margin-bottom: 0.6rem; transition: color 0.2s; } .fcol a:hover { color: var(--cream); } .fbot { border-top: 1px solid rgba(247,245,240,0.08); padding-top: 1.75rem; display: flex; justify-content: space-between; align-items: center; font-size: 10px; flex-wrap: wrap; gap: 0.5rem; } .fsms { background: rgba(170,191,216,0.1); border-radius: 8px; padding: 0.4rem 0.85rem; font-size: 9.5px; color: var(--powder); } @media (max-width:900px){ nav {  padding: 1rem 1.5rem; }  .nav-links {  display: none; }  .hero {  grid-template-columns: 1fr;  padding: 7rem 1.5rem 4rem;  gap: 3rem; }  .hr {  display: none; }  section {  padding: 5rem 1.5rem; }  .booking {  grid-template-columns: 1fr;  gap: 2.5rem; }  .fg2 {  grid-template-columns: 1fr;  gap: 2rem; }  .trust {  gap: 1.25rem;  padding: 1rem 1.5rem; } }</style>
+    </head>
+    <body>
+        <div class="ann">Text reminders 24 hrs before &amp; after every clean ✦ Austin, TX</div>
+        <nav id="mnav">
+            <a href="#" class="nav-brand">ATX<span> Cleaning Co.</span></a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#addons">Add-ons</a>
+                <a href="#how">How it works</a>
+                <a href="#booking" class="nav-btn">Request a clean</a>
+            </div>
+        </nav>
+        <section class="hero" id="home">
+            <div class="hbg1"></div>
+            <div class="hbg2"></div>
+            <div class="hl">
+                <p class="h-ey">Austin's boutique home cleaning</p>
+                <h1 class="h1">Your home,<br/><em>spotless.</em></h1>
+                <p class="h-sub">Trusted local cleaners. Reliable scheduling. A home that feels like a fresh start every time.</p>
+                <div class="h-acts">
+                    <a href="#booking" class="btn-p">Request a clean</a>
+                    <a href="#services" class="btn-g">See services</a>
+                </div>
+                <div class="h-stats">
+                    <div>
+                        <div class="hsn">100%</div>
+                        <div class="hsl">Satisfaction</div>
+                    </div>
+                    <div>
+                        <div class="hsn">24hr</div>
+                        <div class="hsl">Text reminders</div>
+                    </div>
+                    <div>
+                        <div class="hsn">Local</div>
+                        <div class="hsl">Austin crew</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hr">
+                <div class="hcard acc">
+                    <div class="hcard-ico">✦</div>
+                    <div class="hcard-t">Boutique service</div>
+                    <div class="hcard-s">Same cleaner every visit. You'll know who's coming before they arrive.</div>
+                </div>
+                <div class="hcrow">
+                    <div class="hcard pw">
+                        <div class="hcard-ico">📱</div>
+                        <div class="hcard-t">Text updates</div>
+                        <div class="hcard-s">Before &amp; after every clean, automatically.</div>
+                    </div>
+                    <div class="hcard">
+                        <div class="hcard-ico">🌿</div>
+                        <div class="hcard-t">Non-toxic option</div>
+                        <div class="hcard-s">Eco-friendly supplies on request.</div>
+                    </div>
+                </div>
+                <div class="hcard">
+                    <div class="hcard-ico">🔁</div>
+                    <div class="hcard-t">Recurring discounts</div>
+                    <div class="hcard-s">Save 10% biweekly or 15% weekly — applied automatically at checkout.</div>
+                </div>
+            </div>
+        </section>
+        <div class="trust">
+            <div class="ti">
+                <div class="td"></div>                                Vetted local cleaners
+            </div>
+            <div class="ti">
+                <div class="td"></div>                                Secure payment via Stripe
+            </div>
+            <div class="ti">
+                <div class="td"></div>                                Text updates on every booking
+            </div>
+            <div class="ti">
+                <div class="td"></div>                                Non-toxic option available
+            </div>
+            <div class="ti">
+                <div class="td"></div>                                Recurring discounts auto-applied
+            </div>
+        </div>
+        <section class="services" id="services">
+            <div class="sh">
+                <p class="sey">What we do</p>
+                <h2 class="st">Every kind of clean</h2>
+                <p class="ss">From weekly maintenance to post-renovation deep cleans — we handle it all.</p>
+            </div>
+            <div class="sg">
+                <div class="svc">
+                    <div class="sico">🏠</div>
+                    <h3>Residential</h3>
+                    <p>Recurring or one-time home cleaning, tiered by square footage.</p>
+                    <span class="stag">Most popular</span>
+                </div>
+                <div class="svc">
+                    <div class="sico">🔨</div>
+                    <h3>Post-Renovation</h3>
+                    <p>Construction dust, paint residue, debris — we restore your space.</p>
+                    <span class="stag">Custom quote</span>
+                </div>
+                <div class="svc">
+                    <div class="sico">🏨</div>
+                    <h3>Airbnb / STR</h3>
+                    <p>Turnover cleans timed for check-in. Guest-ready every time.</p>
+                    <span class="stag">Recurring available</span>
+                </div>
+                <div class="svc">
+                    <div class="sico">💼</div>
+                    <h3>Small Office</h3>
+                    <p>Keep your workspace fresh on a schedule that works for your team.</p>
+                    <span class="stag">Weekly plans</span>
+                </div>
+                <div class="svc">
+                    <div class="sico">🚗</div>
+                    <h3>Garage</h3>
+                    <p>Full sweep, dust, and organize. Standalone or as an add-on.</p>
+                    <span class="stag">Add-on friendly</span>
+                </div>
+                <div class="svc">
+                    <div class="sico">📦</div>
+                    <h3>Move In / Out</h3>
+                    <p>Deep clean before you move in or leave a space spotless.</p>
+                    <span class="stag">Checklist included</span>
+                </div>
+            </div>
+        </section>
+        <section class="pricing" id="pricing">
+            <div class="sh">
+                <p class="sey">Transparent pricing</p>
+                <h2 class="st">Simple &amp; straightforward</h2>
+                <p class="ss">Priced by square footage. Recurring clients save automatically.</p>
+            </div>
+            <div class="ptabs">
+                <button class="ptab active" onclick="showTab('std',this)">Standard</button>
+                <button class="ptab" onclick="showTab('deep',this)">Deep clean</button>
+                <button class="ptab" onclick="showTab('mv',this)">Move in / out</button>
+                <button class="ptab" onclick="showTab('bnb',this)">Airbnb / STR</button>
+                <button class="ptab" onclick="showTab('rno',this)">Post-renovation</button>
+                <button class="ptab" onclick="showTab('ofc',this)">Small office</button>
+            </div>
+            <div class="pp active" id="tab-std">
+                <div class="pgrid">
+                    <div class="pc">
+                        <p class="pl">Studio · 1BR</p>
+                        <p class="pa">$130</p>
+                        <p class="ps">Up to ~750 sq ft</p>
+                        <p class="pn">Biweekly from $117</p>
+                    </div>
+                    <div class="pc feat">
+                        <p class="pl">2BR · 2BA</p>
+                        <p class="pa">$175</p>
+                        <p class="ps">Up to ~1,200 sq ft</p>
+                        <p class="pn">Biweekly from $158</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">3BR · 2BA</p>
+                        <p class="pa">$215</p>
+                        <p class="ps">Up to ~1,800 sq ft</p>
+                        <p class="pn">Biweekly from $194</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">4BR · 3BA</p>
+                        <p class="pa">$260</p>
+                        <p class="ps">Up to ~2,400 sq ft</p>
+                        <p class="pn">Biweekly from $234</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">5BR+</p>
+                        <p class="pa">$310+</p>
+                        <p class="ps">2,400+ sq ft</p>
+                        <p class="pn">Custom quote available</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pp" id="tab-deep">
+                <div class="pintro">Recommended for first-time clients or homes that haven't been cleaned in a while. Includes baseboards, inside cabinets, ceiling fans, window sills, and all the spots a standard clean skips.</div>
+                <div class="pgrid">
+                    <div class="pc">
+                        <p class="pl">Studio · 1BR</p>
+                        <p class="pa">$195</p>
+                        <p class="ps">Full deep clean</p>
+                    </div>
+                    <div class="pc feat">
+                        <p class="pl">2BR · 2BA</p>
+                        <p class="pa">$255</p>
+                        <p class="ps">Full deep clean</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">3BR · 2BA</p>
+                        <p class="pa">$295</p>
+                        <p class="ps">Full deep clean</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">4BR · 3BA</p>
+                        <p class="pa">$345</p>
+                        <p class="ps">Full deep clean</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">5BR+</p>
+                        <p class="pa">$400+</p>
+                        <p class="ps">Custom quote</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pp" id="tab-mv">
+                <div class="pintro">Full deep clean plus a move-out checklist. Includes inside appliances, all cabinets, closets, and a condition walkthrough. Perfect for security deposit protection.</div>
+                <div class="pgrid">
+                    <div class="pc">
+                        <p class="pl">Studio · 1BR</p>
+                        <p class="pa">$280</p>
+                        <p class="ps">Checklist included</p>
+                    </div>
+                    <div class="pc feat">
+                        <p class="pl">2BR · 2BA</p>
+                        <p class="pa">$340</p>
+                        <p class="ps">Checklist included</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">3BR · 2BA</p>
+                        <p class="pa">$385</p>
+                        <p class="ps">Checklist included</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">4BR · 3BA</p>
+                        <p class="pa">$440</p>
+                        <p class="ps">Checklist included</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">5BR+</p>
+                        <p class="pa">$500+</p>
+                        <p class="ps">Custom quote</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pp" id="tab-bnb">
+                <div class="pintro">Turnover cleans timed around your guest check-in and check-out. We handle linen changes, restocking, and making sure every corner is guest-ready. Recurring hosts get priority scheduling.</div>
+                <div class="pgrid">
+                    <div class="pc">
+                        <p class="pl">Studio · 1BR</p>
+                        <p class="pa">$110</p>
+                        <p class="ps">Per turnover</p>
+                        <p class="pn">Recurring rate available</p>
+                    </div>
+                    <div class="pc feat">
+                        <p class="pl">2BR · 2BA</p>
+                        <p class="pa">$150</p>
+                        <p class="ps">Per turnover</p>
+                        <p class="pn">Recurring rate available</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">3BR · 2BA</p>
+                        <p class="pa">$185</p>
+                        <p class="ps">Per turnover</p>
+                        <p class="pn">Recurring rate available</p>
+                    </div>
+                    <div class="pc">
+                        <p class="pl">4BR+</p>
+                        <p class="pa">$225+</p>
+                        <p class="ps">Per turnover</p>
+                        <p class="pn">Custom quote</p>
+                    </div>
+                    <div class="pc qc">
+                        <p class="pl">High-frequency hosts</p>
+                        <p class="pa">Let's talk</p>
+                        <p class="ps">Custom monthly rate · 8+ turnovers/month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pp" id="tab-rno">
+                <div class="pintro">Post-construction cleans are priced per project — every job is different. Send us a few photos and we'll get you a quote within 24 hours. No obligation.</div>
+                <div class="pgrid">
+                    <div class="pc qc">
+                        <p class="pl">Small space</p>
+                        <p class="pa">From $300</p>
+                        <p class="ps">Under 1,000 sq ft · light dust &amp; debris</p>
+                    </div>
+                    <div class="pc qc feat">
+                        <p class="pl">Mid-size home</p>
+                        <p class="pa">From $450</p>
+                        <p class="ps">1,000–2,500 sq ft · full renovation clean</p>
+                    </div>
+                    <div class="pc qc">
+                        <p class="pl">Large / full reno</p>
+                        <p class="pa">Custom</p>
+                        <p class="ps">2,500+ sq ft or heavy construction</p>
+                    </div>
+                    <div class="pc qc">
+                        <p class="pl">Commercial / builder</p>
+                        <p class="pa">Custom</p>
+                        <p class="ps">New builds, multi-unit, ongoing contracts</p>
+                    </div>
+                </div>
+                <div style="margin-top:1.5rem;padding:1.25rem 1.5rem;background:var(--powder-lt);border-radius:var(--r);font-size:12px;color:var(--mid);">📸 Send us photos and we'll quote within 24 hrs — no commitment needed.</div>
+            </div>
+            <div class="pp" id="tab-ofc">
+                <div class="pintro">Small offices, studios, and shared workspaces. We work around your team's schedule — early morning, evenings, or weekends. Recurring clients get a locked-in rate.</div>
+                <div class="pgrid">
+                    <div class="pc qc">
+                        <p class="pl">Micro office</p>
+                        <p class="pa">From $120</p>
+                        <p class="ps">1–5 desks · under 500 sq ft</p>
+                        <p class="pn">Weekly from $100</p>
+                    </div>
+                    <div class="pc qc feat">
+                        <p class="pl">Small office</p>
+                        <p class="pa">From $175</p>
+                        <p class="ps">5–15 desks · 500–1,200 sq ft</p>
+                        <p class="pn">Weekly from $150</p>
+                    </div>
+                    <div class="pc qc">
+                        <p class="pl">Mid-size office</p>
+                        <p class="pa">From $250</p>
+                        <p class="ps">15–30 desks · up to 2,500 sq ft</p>
+                        <p class="pn">Custom recurring rate</p>
+                    </div>
+                    <div class="pc qc">
+                        <p class="pl">Studio / creative</p>
+                        <p class="pa">Custom</p>
+                        <p class="ps">Photography, salon, wellness studio, etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rbanner">
+                <div>
+                    <strong>Save with recurring cleanings</strong>
+                    <p>10% off biweekly · 15% off weekly — applied automatically at checkout.</p>
+                </div>
+                <a href="#booking" class="btn-p">Set up recurring</a>
+            </div>
+        </section>
+        <section class="addons" id="addons">
+            <div class="aintro">
+                <div>
+                    <p class="sey">Customize your clean</p>
+                    <h2 class="st" style="margin-bottom:0;">Add-ons</h2>
+                </div>
+                <p class="ss">Select extras when you book — we'll take care of the rest.</p>
+            </div>
+            <div class="agrid">
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Non-toxic supplies</span>
+                    <span class="ap">+$20</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Interior oven</span>
+                    <span class="ap">+$35</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Laundry (wash + fold)</span>
+                    <span class="ap">+$25</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Interior cabinets</span>
+                    <span class="ap">+$40</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Move-out checklist</span>
+                    <span class="ap">+$45</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Pet hair deep clean</span>
+                    <span class="ap">+$25</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Interior windows</span>
+                    <span class="ap">+$30</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Interior fridge</span>
+                    <span class="ap">+$30</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Post-party cleanup</span>
+                    <span class="ap">+$50</span>
+                </div>
+                <div class="achip" onclick="this.classList.toggle('sel')">
+                    <div class="adot"></div>
+                    <span class="an">Organizing / declutter</span>
+                    <span class="ap">+$40</span>
+                </div>
+            </div>
+        </section>
+        <section class="how" id="how">
+            <div class="how-bg"></div>
+            <div class="sh" style="position:relative;z-index:1;">
+                <p class="sey">The process</p>
+                <h2 class="st">Simple as that</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <span class="snum">01</span>
+                    <h4>Request online</h4>
+                    <p>Pick your service, size, and a time that works. We'll confirm your cleaner within a few hours.</p>
+                </div>
+                <div class="step">
+                    <span class="snum">02</span>
+                    <h4>We remind you</h4>
+                    <p>Text reminder sent 24 hours before your clean. No surprises, no missed appointments.</p>
+                </div>
+                <div class="step">
+                    <span class="snum">03</span>
+                    <h4>Your crew arrives</h4>
+                    <p>Your trusted cleaner shows up on time and takes care of everything.</p>
+                </div>
+                <div class="step">
+                    <span class="snum">04</span>
+                    <h4>Done &amp; confirmed</h4>
+                    <p>Text when complete. Your card is only charged after the job is done — or pay by Zelle/Venmo if you prefer.</p>
+                </div>
+            </div>
+        </section>
+        <!-- BOOKING — Calendly inline -->
+        <section class="booking" id="booking">
+            <div class="binfo">
+                <p class="sey">Request a cleaning</p>
+                <h2 class="st">Let's get your<br/>home sorted.</h2>
+                <p class="ss">Pick a date and time, answer a few quick questions, and we'll confirm your cleaner. Easy and no commitment until we reach out to confirm.</p>
+                <ul class="bperks">
+                    <li>
+                        <div class="pkd"></div>                                                Select your service type &amp; home size
+                    </li>
+                    <li>
+                        <div class="pkd"></div>                                                Choose your preferred date &amp; time
+                    </li>
+                    <li>
+                        <div class="pkd"></div>                                                Card not charged until after your clean
+                    </li>
+                    <li>
+                        <div class="pkd"></div>                                                24-hour text reminder included
+                    </li>
+                    <li>
+                        <div class="pkd"></div>                                                Zelle &amp; Venmo also accepted
+                    </li>
+                </ul>
+                <div class="bpay-note">
+                    <strong>💳 Payment options</strong>
+                    If you select <strong>Credit/Debit card</strong> when booking, you'll be prompted to securely enter your card via Stripe — your card is <em>not charged</em> until after your cleaning is complete. Prefer <strong>Zelle or Venmo</strong>? Select that option and we'll send a payment request after your clean.
+                </div>
+            </div>
+            <div class="bcal-embed">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/atxcleaningco?background_color=ede6d8&primary_color=6b8fae" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </section>
+        <section class="testi">
+            <div class="sh">
+                <p class="sey">What clients say</p>
+                <h2 class="st">People love coming home.</h2>
+            </div>
+            <div class="tgrid">
+                <div class="tcard">
+                    <div class="tstar">★★★★★</div>
+                    <p class="ttxt">"Always on time, easy to communicate with, and the place feels reset every time they leave."</p>
+                    <p class="tauth">Sarah M. · East Austin</p>
+                </div>
+                <div class="tcard">
+                    <div class="tstar">★★★★★</div>
+                    <p class="ttxt">"I use them for my Airbnb and the turnovers are smooth, reliable, and consistently guest-ready."</p>
+                    <p class="tauth">James T. · South Congress</p>
+                </div>
+                <div class="tcard">
+                    <div class="tstar">★★★★★</div>
+                    <p class="ttxt">"The post-renovation clean made such a difference. It finally felt like I could enjoy the space."</p>
+                    <p class="tauth">Lauren K. · Mueller</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="fg2">
+                <div class="fbrand">
+                    <div class="flogo">ATX<span> Cleaning Co.</span>
+                    </div>
+                    <p class="ftag">Austin's trusted boutique home cleaning. Local crew, personal service, reliable results.</p>
+                    <div class="fsms">📱 Text reminders on every booking</div>
+                </div>
+                <div class="fcol">
+                    <h5>Services</h5>
+                    <a href="#services">Residential</a>
+                    <a href="#services">Deep clean</a>
+                    <a href="#services">Post-renovation</a>
+                    <a href="#services">Airbnb / STR</a>
+                    <a href="#services">Small office</a>
+                    <a href="#services">Garage</a>
+                </div>
+                <div class="fcol">
+                    <h5>Company</h5>
+                    <a href="#how">How it works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#addons">Add-ons</a>
+                    <a href="#booking">Request a clean</a>
+                </div>
+            </div>
+            <div class="fbot">
+                <span>© 2026 ATX Cleaning Co. · Austin, TX</span>
+                <span>Payments via Stripe · Scheduling via Calendly</span>
+            </div>
+        </footer>
+        <!-- Calendly widget JS -->
+        <script>
+function showTab(n,b){
+  document.querySelectorAll('.pp').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+n).classList.add('active');
+  b.classList.add('active');
+}
+window.addEventListener('scroll',()=>{
+  document.getElementById('mnav').classList.toggle('scrolled',scrollY>40);
+});
+const obs=new IntersectionObserver(e=>e.forEach(x=>{
+  if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)';}
+}),{threshold:0.07});
+document.querySelectorAll('.svc,.pc,.step,.tcard,.achip,.hcard').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';
+  el.style.transition='opacity 0.5s ease,transform 0.5s ease';
+  obs.observe(el);
+});
+</script>
+    </body>
+</html>
